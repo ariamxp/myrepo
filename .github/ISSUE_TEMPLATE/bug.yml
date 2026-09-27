@@ -1,0 +1,62 @@
+name: Bug
+description: Reporta algo que no funciona como debería
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Un buen reporte ahorra horas. Si puedes, adjunta una captura o un video corto.
+
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué pasó?
+      placeholder: "Ej: al subir una foto del repuesto, la app se queda cargando y no avanza."
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      description: Lo que hiciste, paso a paso, hasta que apareció el error.
+      placeholder: |
+        1. Entré al panel de tiendas
+        2. Abrí un pedido
+        3. Toqué "Enviar oferta"
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas que pasara?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: donde
+    attributes:
+      label: ¿Dónde ocurrió?
+      options:
+        - Panel de tiendas
+        - App de usuario
+        - Otro
+    validations:
+      required: true
+
+  - type: input
+    id: dispositivo
+    attributes:
+      label: Dispositivo y navegador
+      placeholder: "Ej: Android, Chrome / iPhone, Safari / PC, Chrome"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Capturas o video
+      description: Arrastra aquí las imágenes o videos.
+    validations:
+      required: false

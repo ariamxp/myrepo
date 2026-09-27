@@ -1,0 +1,55 @@
+name: Requerimiento
+description: Pide una mejora o una funcionalidad nueva
+labels: ["mejora"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por levantar esto. Mientras más claro el impacto, más fácil es priorizarlo.
+        Todo lo que entra por aquí se revisa en el triage semanal antes de pasar al backlog.
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué problema resuelve?
+      description: Describe el problema, no la solución. ¿Qué no se puede hacer hoy o qué se hace mal?
+      placeholder: "Ej: los usuarios no se enteran cuando una tienda les manda una oferta."
+    validations:
+      required: true
+
+  - type: input
+    id: solicitante
+    attributes:
+      label: ¿Quién lo pide?
+      description: Tu nombre y, si aplica, la tienda o usuario que lo reportó.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: afecta
+    attributes:
+      label: ¿A quién afecta?
+      multiple: true
+      options:
+        - Tiendas
+        - Usuarios
+        - Talleres / mecánicos
+        - Equipo interno
+    validations:
+      required: true
+
+  - type: textarea
+    id: impacto
+    attributes:
+      label: ¿Qué pasa si no se hace?
+      description: Sé concreto. ¿Se pierden ventas, tiendas, tiempo del equipo? ¿O es algo que estaría bien tener?
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidencia
+      description: Capturas, mensajes, casos reales, cuántas personas lo han pedido. Puedes arrastrar imágenes aquí.
+    validations:
+      required: false
